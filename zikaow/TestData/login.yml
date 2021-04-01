@@ -1,0 +1,13 @@
+login:
+  -
+    by: id
+    locator: com.zikao.eduol:id/tv_personal_name
+    action: click
+  -
+    by: id
+    locator: com.zikao.eduol:id/shanyan_view_privacy_checkbox
+    action: click
+  -
+    by: id
+    locator: com.zikao.eduol:id/shanyan_view_bt_one_key_login
+    action: click

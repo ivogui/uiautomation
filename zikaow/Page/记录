@@ -1,0 +1,14 @@
+我的：com.zikao.eduol:id/rb_mine
+登录 / 注册：com.zikao.eduol:id/tv_personal_name
+
+协议勾选：com.zikao.eduol:id/shanyan_view_privacy_checkbox
+其他方式登录：android.widget.ImageView
+一键登录：com.zikao.eduol:id/shanyan_view_bt_one_key_login
+
+
+
+com.netease.cloudmusic:id/icon
+com.netease.cloudmusic:id/icon
+
+//*[coutains(@resiurce-id,'bottomNav')]//*[@text='播客']
+//*[coutains(@resiurce-id,'bottomNav')]//*[@class='android.view.ViewGroup' and @index='1']

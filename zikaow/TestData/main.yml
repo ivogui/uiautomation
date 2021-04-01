@@ -1,0 +1,11 @@
+go_my_login:
+  -
+    by: id
+    locator: com.zikao.eduol:id/rb_mine
+    action: click
+
+go_homepage:
+  -
+    by: id
+    locator：
+    action:
