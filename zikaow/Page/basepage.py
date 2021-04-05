@@ -56,25 +56,16 @@ class BasePage:
     def steps(self, path, key):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
         with open(path, 'r', encoding='utf-8') as f:
             steps: List[dict] = yaml.safe_load(f)  # 操作步骤的数据类型为：[{},{}]
-            po_method = steps[key]
-            # if po_method.keys().__contains__("elements"):
-            #     po_elements = steps['elements']
             # 遍历操作步骤
+            po_method = steps[key]
             for step in po_method:
                 if 'by' in step.keys():
                     element = self.find(step['by'], step['locator'])  # 定位到元素
-            # for step in po_method:
-            #     if step.keys().__contains__("element"):
-            #         element_platform = po_elements[step['element']]
-            #     else:
-            #         element_platform = {"by": step['by'], "locator": step['locator']}
-            #     element: WebElement = self.find(by=element_platform['by'], locator=element_platform['locator'])
-
                 # 要进行的动作操作
                 if 'action' in step.keys():
                     if 'click' == step['action']:  # 点击操作
                         element.click()
-                    if 'send' == step['action']:
+                    if 'send' == step['action']:  # 输入操作
                         element.send_keys(step['value'])
                     if 'TouchAction' in step['action']:  # 滑动操作
                         action = TouchAction(self._driver)

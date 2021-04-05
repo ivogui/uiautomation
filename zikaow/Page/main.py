@@ -10,9 +10,11 @@ class Main(BasePage):
         self._driver.quit()
 
     def go_my_login(self):  # 进入我的
-        self.steps('D:\\zikaow\\zikaow\\TestData\\main.yml', 'go_my_login')
+        self.steps('/Users/ivo-g/Documents/AutomatedScripts/gitfile/uiautomation/zikaow/'
+                   'TestData/main.yml', 'go_my_login')
         return Login(self._driver)
 
     def go_homepage(self): # 进入首页
-        self.steps('D:\\zikaow\\zikaow\\TestData\\main.yml', 'go_homepage')
+        self.steps('D:/Users/ivo-g/Documents/AutomatedScripts/gitfile/uiautomation/zikaow/'
+                   'TestData/main.yml', 'go_homepage')
         return BooksMall(self._driver)

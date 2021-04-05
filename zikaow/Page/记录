@@ -1,14 +1,59 @@
 我的：com.zikao.eduol:id/rb_mine
-登录 / 注册：com.zikao.eduol:id/tv_personal_name
+选课：com.zikao.eduol:id/rb_course
+首页：com.zikao.eduol:id/rb_home
+学习：com.zikao.eduol:id/rv_study
+直播：com.zikao.eduol:id/img_live
 
+我的「
+登录 / 注册：com.zikao.eduol:id/tv_personal_name
 协议勾选：com.zikao.eduol:id/shanyan_view_privacy_checkbox
-其他方式登录：android.widget.ImageView
 一键登录：com.zikao.eduol:id/shanyan_view_bt_one_key_login
 
+账号登录：android.widget.ImageView index 6
 
+登录页面返回：com.zikao.eduol:id/iv_login_copy_back
+父类：验证码登记/密码登记：com.zikao.eduol:id/tl_login_copy
 
-com.netease.cloudmusic:id/icon
-com.netease.cloudmusic:id/icon
+验证码页面
+请输入您的手机号：com.zikao.eduol:id/et_fg_login_by_sms_phone
+请输入验证码：com.zikao.eduol:id/et_fg_login_by_sms_code
+获取验证码：com.zikao.eduol:id/rtv_fg_login_by_sms_get_code
+验证码页面登录：com.zikao.eduol:id/tv_fg_login_by_sms_login
+同意阅读：com.zikao.eduol:id/ck_private
+用户协议：com.zikao.eduol:id/tv_login_by_sms_agreement
+隐私政策：com.zikao.eduol:id/tv_login_by_sms_privacy
+
+密码登录页面：
+请输入您的手机号:com.zikao.eduol:id/et_fg_login_by_pwd_phone
+请输入您的密码:com.zikao.eduol:id/et_fg_login_by_pwd_pwd
+登录:com.zikao.eduol:id/tv_fg_login_by_pwd_login
+忘记密码?:com.zikao.eduol:id/tv_fg_login_by_pwd_forget
+同意阅读：com.zikao.eduol:id/ck_private
+用户协议：com.zikao.eduol:id/tv_login_by_pwd_agreement
+隐私政策：com.zikao.eduol:id/tv_login_by_pwd_privacy
+
+重置密码：
+返回按钮：com.zikao.eduol:id/iv_forget_back
+请输入您的手机号：com.zikao.eduol:id/et_forget_phone
+请输入验证码：com.zikao.eduol:id/et_forget_code
+获取验证码：com.zikao.eduol:id/rtv_forget_get_code
+请输入您的密码：com.zikao.eduol:id/et_forget_pwd
+重置密码：com.zikao.eduol:id/tv_forget_reset
+已有账号，请登录>：com.zikao.eduol:id/tv_forget_to_login
+用户协议：com.zikao.eduol:id/tv_forget_agreement
+隐私政策：com.zikao.eduol:id/tv_forget_privacy
+返回：com.zikao.eduol:id/ag_back
+
+com.zikao.eduol:id/shanyan_view_navigationbar_include
+com.zikao.eduol:id/iv_login_copy_back
+com.zikao.eduol:id/iv_login_copy_back
+
 
 //*[coutains(@resiurce-id,'bottomNav')]//*[@text='播客']
 //*[coutains(@resiurce-id,'bottomNav')]//*[@class='android.view.ViewGroup' and @index='1']
+
+设置：com.zikao.eduol:id/tv_personal_setup
+退出登录：com.zikao.eduol:id/personl_setting_exit
+确定：com.zikao.eduol:id/confirm_button
+取消：com.zikao.eduol:id/cancel_button
+」

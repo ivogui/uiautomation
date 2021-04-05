@@ -1,13 +1,55 @@
-login:
+oneclicklogin:
   -
     by: id
     locator: com.zikao.eduol:id/tv_personal_name
     action: click
   -
-    by: id
-    locator: com.zikao.eduol:id/shanyan_view_privacy_checkbox
+    by: xpath
+    locator:
     action: click
   -
     by: id
     locator: com.zikao.eduol:id/shanyan_view_bt_one_key_login
+    action: click
+
+logout:
+  -
+    by: id
+    locator: com.zikao.eduol:id/tv_personal_setup
+    action: click
+  -
+    by: id
+    locator: com.zikao.eduol:id/personl_setting_exit
+    action: click
+  -
+    by: id
+    locator: com.zikao.eduol:id/confirm_button
+    action: click
+
+loginByPassword:
+  -
+    by: id
+    locator: com.zikao.eduol:id/tv_personal_name
+    action: click
+  -
+    by: xpath
+    locator: //*[class='android.widget.ImageView' and @index='6']
+    action: click
+  -
+    by: xpath
+    locator: //*[contains(@resource-id,'tl_login_copy')]//*[@text='密码登录']
+    action: click
+  -
+    by: id
+    locator: com.zikao.eduol:id/et_fg_login_by_pwd_phone
+    action: sendKeys
+    value: $var1
+  -
+    by: id
+    locator: com.zikao.eduol:id/et_fg_login_by_pwd_pwd
+    action: sendKeys
+    value: $var2
+  -
+    by: id
+    locator: com.zikao.eduol:id/tv_fg_login_by_pwd_login
     action: click
