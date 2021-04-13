@@ -1,10 +1,10 @@
-
+from telnetlib import EC
+from selenium.webdriver.support.wait import WebDriverWait
 from appium.webdriver.webdriver import WebDriver
 from appium.webdriver.common.touch_action import TouchAction
 import yaml
 import pytest
 from time import sleep
-
 from typing import List
 
 '''创建一个基础页面类，用于封装公共模块的处理方法
@@ -14,7 +14,7 @@ from typing import List
 class BasePage:
     _blackList = []  # 黑名单列表，用于处理再case运行过程中可能出现的未知弹窗
     _errorCount = 0  # 定位元素的错误次数，元素定位中可能出现一次定位不到
-    _errorMax = 5  # 允许进行元素定位的最大错误次数
+    _errorMax = 10  # 允许进行元素定位的最大错误次数
 
     def __init__(self, driver: WebDriver = None):  # 初始化driver
         self._driver = driver
@@ -53,7 +53,15 @@ class BasePage:
                     return self.find(by, locator)
             raise e
 
-    def steps(self, path, key):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
+    def toastText(self, text, timeout=3, poll_frequency=0.2):  # -搜索界面弹出的 -toast -tips
+        """
+         - timeout - 最大超时时间，默认30s
+         - poll_frequency  - 间隔查询时间，默认0.5s查询一次
+        """
+        toast_loc = ("xpath", ".//*[contains(@text,'%s')]" % text)
+        WebDriverWait(self, timeout, poll_frequency).until(EC.presence_of_element_located(toast_loc))
+
+    def steps(self, path, key, **kwargs):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
         with open(path, 'r', encoding='utf-8') as f:
             steps: List[dict] = yaml.safe_load(f)  # 操作步骤的数据类型为：[{},{}]
             # 遍历操作步骤
@@ -66,7 +74,12 @@ class BasePage:
                     if 'click' == step['action']:  # 点击操作
                         element.click()
                     if 'send' == step['action']:  # 输入操作
-                        element.send_keys(step['value'])
+                        value = str(step['value'])
+                        for k, v in kwargs.items():
+                            origin = value
+                            value = value.replace("$%s" % k, v)
+                            print("update value: %s %s" % (origin, value))
+                        element.send_keys(value)
                     if 'TouchAction' in step['action']:  # 滑动操作
                         action = TouchAction(self._driver)
                         action.press(x=step['value'][0]['x_start'], y=step['value'][0]['y_start']).wait(300) \

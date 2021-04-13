@@ -13,6 +13,7 @@ class App(BasePage):
                 "appPackage": _package,
                 "appActivity": _activity,
                 "platformName": "Android",
+                "automationName": "Uiautomator2",
                 "platformVersion": "10",
                 # "dontStopAppOnReset": "true",  # 启动程序不要停止被测程序
                 "autoGranPermissions": "true",   # 安装时默认配置权限true
@@ -32,6 +33,7 @@ class App(BasePage):
                 "appPackage": _package,
                 "appActivity": _activity,
                 "platformName": "Android",
+                "automationName": "Uiautomator2",
                 "platformVersion": "10",
                 # "dontStopAppOnReset": "true",     # 启动程序不要停止被测程序
                 "noReset": "true",     # 不要清除应用程序数据

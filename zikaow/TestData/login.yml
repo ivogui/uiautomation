@@ -13,6 +13,14 @@ oneclicklogin:
     action: click
 
 logout:
+  - by: id
+    locator: android:id/content
+    action: TouchAction
+    value:
+      - x_start: 539
+        y_start: 1239
+      - x_end: 539
+        y_end: 560
   -
     by: id
     locator: com.zikao.eduol:id/tv_personal_setup
@@ -33,7 +41,7 @@ loginByPassword:
     action: click
   -
     by: xpath
-    locator: //*[class='android.widget.ImageView' and @index='6']
+    locator: //*[@class='android.widget.ImageView' and @index='6']
     action: click
   -
     by: xpath
@@ -42,14 +50,19 @@ loginByPassword:
   -
     by: id
     locator: com.zikao.eduol:id/et_fg_login_by_pwd_phone
-    action: sendKeys
+    action: send
     value: $var1
   -
     by: id
     locator: com.zikao.eduol:id/et_fg_login_by_pwd_pwd
-    action: sendKeys
+    action: send
     value: $var2
   -
     by: id
     locator: com.zikao.eduol:id/tv_fg_login_by_pwd_login
+    action: click
+back:
+  -
+    by: id
+    locator: com.zikao.eduol:id/iv_login_copy_back
     action: click

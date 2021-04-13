@@ -11,7 +11,7 @@
 
 账号登录：android.widget.ImageView index 6
 
-登录页面返回：com.zikao.eduol:id/iv_login_copy_back
+
 父类：验证码登记/密码登记：com.zikao.eduol:id/tl_login_copy
 
 验证码页面
@@ -22,6 +22,7 @@
 同意阅读：com.zikao.eduol:id/ck_private
 用户协议：com.zikao.eduol:id/tv_login_by_sms_agreement
 隐私政策：com.zikao.eduol:id/tv_login_by_sms_privacy
+返回按钮：com.zikao.eduol:id/iv_login_copy_back
 
 密码登录页面：
 请输入您的手机号:com.zikao.eduol:id/et_fg_login_by_pwd_phone
@@ -31,6 +32,7 @@
 同意阅读：com.zikao.eduol:id/ck_private
 用户协议：com.zikao.eduol:id/tv_login_by_pwd_agreement
 隐私政策：com.zikao.eduol:id/tv_login_by_pwd_privacy
+返回按钮：com.zikao.eduol:id/iv_login_copy_back
 
 重置密码：
 返回按钮：com.zikao.eduol:id/iv_forget_back
