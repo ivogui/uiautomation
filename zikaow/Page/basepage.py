@@ -1,4 +1,5 @@
-from telnetlib import EC
+# coding=utf-8
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from appium.webdriver.webdriver import WebDriver
 from appium.webdriver.common.touch_action import TouchAction
@@ -53,13 +54,13 @@ class BasePage:
                     return self.find(by, locator)
             raise e
 
-    def toastText(self, text, timeout=3, poll_frequency=0.2):  # -搜索界面弹出的 -toast -tips
+    def toastText(self, text, timeout=2, poll_frequency=0.2):  # -搜索界面弹出的 -toast -tips
         """
          - timeout - 最大超时时间，默认30s
          - poll_frequency  - 间隔查询时间，默认0.5s查询一次
         """
         toast_loc = ("xpath", ".//*[contains(@text,'%s')]" % text)
-        WebDriverWait(self, timeout, poll_frequency).until(EC.presence_of_element_located(toast_loc))
+        WebDriverWait(self._driver, timeout, poll_frequency).until(EC.presence_of_element_located(toast_loc))
 
     def steps(self, path, key, **kwargs):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
         with open(path, 'r', encoding='utf-8') as f:

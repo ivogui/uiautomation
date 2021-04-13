@@ -1,5 +1,6 @@
-from zikaow.Page.app import App
+import time
 import pytest
+from zikaow.Page.app import App
 
 
 class TestLogin:
@@ -18,7 +19,9 @@ class TestLogin:
     @pytest.mark.run(order=1)
     def test_log_password(self, user, pw, msg):
         self.loginPage.loginByPassword(user, pw)
-        assert msg in self.loginPage.getErrorMsg()
+        time.sleep(3)
+        print(self.loginPage.getErrorMsg())
+        assert msg == self.loginPage.getErrorMsg()
 
     @pytest.mark.run(order=2)
     def test_login_out(self):
