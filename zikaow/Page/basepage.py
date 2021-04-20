@@ -1,10 +1,12 @@
 # coding=utf-8
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from appium.webdriver.webdriver import WebDriver
 from appium.webdriver.common.touch_action import TouchAction
+from selenium.webdriver.support import expected_conditions as EC
+from appium.webdriver.common.mobileby import MobileBy
 import yaml
 import pytest
+
 from time import sleep
 from typing import List
 
@@ -54,13 +56,28 @@ class BasePage:
                     return self.find(by, locator)
             raise e
 
-    def toastText(self, text, timeout=2, poll_frequency=0.2):  # -搜索界面弹出的 -toast -tips
-        """
-         - timeout - 最大超时时间，默认30s
-         - poll_frequency  - 间隔查询时间，默认0.5s查询一次
-        """
-        toast_loc = ("xpath", ".//*[contains(@text,'%s')]" % text)
-        WebDriverWait(self._driver, timeout, poll_frequency).until(EC.presence_of_element_located(toast_loc))
+    def get_toast(self, text):  # 获取toast
+        toast_loc = "//*[contains(@text,'%s')]" % text
+        #  使用显示等待（页面停留3秒，0.01秒获取一次元素）
+        try:
+            toast_element = WebDriverWait(self._driver, timeout=3, poll_frequency=0.1).\
+                until(EC.presence_of_element_located((MobileBy.XPATH, toast_loc)))
+            attribute = toast_element.get_attribute("text")
+            return attribute
+        except Exception as e:
+            self._errorCount += 1
+            if self._errorCount >= self._errorMax:
+                raise e  # 大于错误次数，抛出异常
+            raise e
+
+    def isElementPresent(self, by, value):  # 判断页面某一个元素是否存在
+        try:
+            self._driver.find_element(by=by, value=value)
+        except Exception as e:
+            print(e)
+            return False
+        else:
+            return True
 
     def steps(self, path, key, **kwargs):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
         with open(path, 'r', encoding='utf-8') as f:
@@ -94,4 +111,6 @@ class BasePage:
                         pytest.assume(attribute == step['assertion']['assert_info'])
                     if 'back' in step.keys():
                         self._driver.back()
+
+
 

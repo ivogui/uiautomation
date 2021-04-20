@@ -10,8 +10,8 @@ oneclicklogin:
   - by: id
     locator: com.zikao.eduol:id/tv_personal_name
     action: click
-  - by: xpath
-    locator:
+  - by: id
+    locator: com.zikao.eduol:id/shanyan_view_privacy_checkbox
     action: click
   - by: id
     locator: com.zikao.eduol:id/shanyan_view_bt_one_key_login
@@ -34,7 +34,14 @@ logout:
   - by: id
     locator: com.zikao.eduol:id/confirm_button
     action: click
-
+  - by: id
+    locator: android:id/content
+    action: TouchAction
+    value:
+      - x_start: 539
+        y_start: 900
+      - x_end: 539
+        y_end: 1600
 loginByPassword:
   - by: id
     locator: android:id/content
@@ -47,10 +54,46 @@ loginByPassword:
   - by: id
     locator: com.zikao.eduol:id/tv_personal_name
     action: click
-#  -
-#    by: xpath
-#    locator: //*[@class='android.widget.ImageView' and @index='6']
-#    action: click
+  - by: xpath
+    locator: //*[@class='android.widget.ImageView' and @index='6']
+    action: click
+  - by: xpath
+    locator: //*[contains(@resource-id,'tl_login_copy')]//*[@text='密码登录']
+    action: click
+  - by: id
+    locator: com.zikao.eduol:id/et_fg_login_by_pwd_phone
+    action: send
+    value: $var1
+  - by: id
+    locator: com.zikao.eduol:id/et_fg_login_by_pwd_pwd
+    action: send
+    value: $var2
+  - by: id
+    locator: com.zikao.eduol:id/tv_fg_login_by_pwd_login
+    action: click
+#  - by: xpath
+#    locator: //*[contains(@text,'登录 / 注册')]
+#    assertion: sleep
+#      sleep: 3
+#      by: xpath
+#      locator: //*[contains(@text,'请输入密码')]
+#      attribute: ==
+#      assert_info: 请输入密码
+loginByPasswordNormal:
+  - by: id
+    locator: android:id/content
+    action: TouchAction
+    value:
+      - x_start: 539
+        y_start: 900
+      - x_end: 539
+        y_end: 1600
+  - by: id
+    locator: com.zikao.eduol:id/tv_personal_name
+    action: click
+  - by: xpath
+    locator: //*[@class='android.widget.ImageView' and @index='6']
+    action: click
   - by: xpath
     locator: //*[contains(@resource-id,'tl_login_copy')]//*[@text='密码登录']
     action: click
@@ -67,5 +110,10 @@ loginByPassword:
     action: click
 back:
   - by: id
-    locator: com.zikao.eduol:id/iv_login_copy_back
-    action: click
+    locator: android:id/content
+    action: TouchAction
+    value:
+      - x_start: 20
+        y_start: 1222
+      - x_end: 700
+        y_end: 1222
