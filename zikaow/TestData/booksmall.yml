@@ -1,5 +1,4 @@
 booksmall:
-  -
-    by:
+  - by:
     locator:
     action:
