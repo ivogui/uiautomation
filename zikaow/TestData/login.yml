@@ -71,15 +71,7 @@ loginByPassword:
   - by: id
     locator: com.zikao.eduol:id/tv_fg_login_by_pwd_login
     action: click
-#  - by: xpath
-#    locator: //*[contains(@text,'登录 / 注册')]
-#    assertion: sleep
-#      sleep: 3
-#      by: xpath
-#      locator: //*[contains(@text,'请输入密码')]
-#      attribute: ==
-#      assert_info: 请输入密码
-loginByPasswordNormal:
+login_SMS:
   - by: id
     locator: android:id/content
     action: TouchAction
@@ -94,19 +86,16 @@ loginByPasswordNormal:
   - by: xpath
     locator: //*[@class='android.widget.ImageView' and @index='6']
     action: click
-  - by: xpath
-    locator: //*[contains(@resource-id,'tl_login_copy')]//*[@text='密码登录']
-    action: click
   - by: id
-    locator: com.zikao.eduol:id/et_fg_login_by_pwd_phone
+    locator: com.zikao.eduol:id/et_fg_login_by_sms_phone
     action: send
     value: $var1
   - by: id
-    locator: com.zikao.eduol:id/et_fg_login_by_pwd_pwd
+    locator: com.zikao.eduol:id/et_fg_login_by_sms_code
     action: send
     value: $var2
   - by: id
-    locator: com.zikao.eduol:id/tv_fg_login_by_pwd_login
+    locator: com.zikao.eduol:id/tv_fg_login_by_sms_login
     action: click
 back:
   - by: id

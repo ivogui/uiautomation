@@ -62,7 +62,7 @@ class BasePage:
         try:
             toast_element = WebDriverWait(self._driver, timeout=3, poll_frequency=0.1).\
                 until(EC.presence_of_element_located((MobileBy.XPATH, toast_loc)))
-            attribute = toast_element.get_attribute("text")
+            attribute = toast_element.get_attribute("text")  # 通过get_attribute获取text文本
             return attribute
         except Exception as e:
             self._errorCount += 1
@@ -74,7 +74,9 @@ class BasePage:
         try:
             self._driver.find_element(by=by, value=value)
         except Exception as e:
-            print(e)
+            self._errorCount += 1
+            if self._errorCount >= self._errorMax:
+                raise e
             return False
         else:
             return True
