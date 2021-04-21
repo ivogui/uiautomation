@@ -60,8 +60,83 @@ com.zikao.eduol:id/iv_login_copy_back
 取消：com.zikao.eduol:id/cancel_button
 」
 
+书籍商城
+书籍商城入口：com.zikao.eduol:id/tv_book_shop
+商品列表
+搜索栏：com.zikao.eduol:id/et_search
+搜索按钮：com.zikao.eduol:id/tv_search
+返回按钮：com.zikao.eduol:id/iv_back
+综合排序：android.widget.TextView  index 0
+销量：com.zikao.eduol  index 1
+筛选：com.zikao.eduol:id/shop_filter_button
+列表级父类resource-id：com.zikao.eduol:id/shop_smart_refresh
+列表级父类resource-id：com.zikao.eduol:id/shop_scroll_view
 
-  -
-    by: xpath
-    locator: //*[contains(@resource-id,'tl_login_copy')]//*[@text='密码登录']
-    action: click
+android.widget.RelativeLayout
+父类class：android.widget.FrameLayout  index 0~129
+书籍图片：com.zikao.eduol:id/item_book_icon
+标题：com.zikao.eduol:id/item_book_title
+描述：com.zikao.eduol:id/item_book_hint
+¥币种：com.zikao.eduol:id/item_book_price_hint
+金额：com.zikao.eduol:id/item_book_price
+付款人数：com.zikao.eduol:id/item_book_sales
+包邮/标签：com.zikao.eduol:id/tv_no_postage
+分享：com.zikao.eduol:id/item_book_more
+底线：com.zikao.eduol:id/bottom_line_tv （text：——— 我也是有底线的 ———）
+
+商城详情
+商城详情标题：com.zikao.eduol:id/shop_detail_title
+推荐/详情/评论class:android.widget.TextView  index 0
+
+返回按钮：com.zikao.eduol:id/shop_detail_back
+书籍分享：com.zikao.eduol:id/shop_detail_share
+书籍图片：com.zikao.eduol:id/vp
+¥币种：com.zikao.eduol:id/shop_detail_price_hint
+金额：com.zikao.eduol:id/shop_detail_price
+包邮/标签：com.zikao.eduol:id/shop_detail_flag_first
+购买人数：com.zikao.eduol:id/shop_detail_count
+书籍名称：com.zikao.eduol:id/shop_detail_name
+描述：com.zikao.eduol:id/shop_detail_hint
+
+推荐课程
+图片icon：com.zikao.eduol:id/img_product_icon
+课程名称：com.zikao.eduol:id/tv_product_title
+价格：com.zikao.eduol:id/item_product_price
+币种/学分：com.zikao.eduol   index 1
+购买人数：com.zikao.eduol:id/tv_product_payment
+查看更多为你推荐：com.zikao.eduol:id/shop_detail_recommend_more
+
+详细资料
+android.widget.Image  index 0
+
+评价
+评价：com.zikao.eduol:id/shop_detail_comment_size
+总评价人数：com.zikao.eduol:id/shop_comment_count
+评价分数：com.zikao.eduol:id/shop_comment_score
+评价人头像：com.zikao.eduol:id/ccommt_perimg
+评价分：com.zikao.eduol:id/rb_item_rv_course_comment
+评价文字：com.zikao.eduol:id/ccommt_context
+评价时间：com.zikao.eduol:id/tv_item_rv_course_comment_date
+点赞人数：com.zikao.eduol:id/like
+
+底部购买栏：com.zikao.eduol:id/shop_detail_service
+立即购买：com.zikao.eduol:id/shop_detail_buy
+
+确定订单页面
+确定订单：com.zikao.eduol:id/pay_confirm_title
+返回按钮：com.zikao.eduol:id/pay_confirm_back
+订单详情父类：com.zikao.eduol:id/pay_confirm_detail_layout
+订单详情iocn：com.zikao.eduol:id/pay_confirm_detail_icon
+名称：com.zikao.eduol:id/pay_confirm_detail_title
+文本描述：com.zikao.eduol:id/pay_confirm_detail_hint
+金额：com.zikao.eduol:id/pay_confirm_detail_price
+留言输入框：com.zikao.eduol:id/pay_confirm_message_input
+支付方式
+微信支付：
+com.zikao.eduol:id/pay_confirm_pay_wechat
+支付支付
+com.zikao.eduol:id/pay_confirm_pay_ali
+¥币种：com.zikao.eduol:id/pay_confirm_last_hint
+金额：com.zikao.eduol:id/pay_confirm_last_price
+确认支付：com.zikao.eduol:id/pay_confirm_paying
+
