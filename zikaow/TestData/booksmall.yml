@@ -1,4 +1,4 @@
-booksmall:
+Books_Mall:
   - by: id
     locator: com.zikao.eduol:id/tv_book_shop
     action: click

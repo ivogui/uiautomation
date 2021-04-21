@@ -6,11 +6,3 @@ go_homepage:
   - by: id
     locator: com.zikao.eduol:id/rb_home
     action: click
-
-  - by: id
-    locator:
-    action:
-
-  - by: id
-    locator:
-    action:

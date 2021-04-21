@@ -7,7 +7,7 @@ class TestLogin:
 
     def setup(self):
         self.BooksMall = self.testDriver.go_homepage()
-        self.loginPage = self.testDriver.go_my_login()
+        # self.loginPage = self.testDriver.go_my_login()
 
     def test_go_booksMall(self):
         self.BooksMall.Books_Mall()

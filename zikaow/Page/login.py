@@ -24,7 +24,7 @@ class Login(BasePage):
             self.steps('../TestData/login.yml', 'login_SMS', var1=account, var2=password)
         else:
             self.logout()
-            return self.loginByPassword(account, password)
+            return self.login_SMS(account, password)
         # sleep(2)
         # # 打开通知栏
         # self._driver.open_notifications()
