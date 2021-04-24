@@ -45,6 +45,7 @@ class TestLogin:
         self.loginPage.get_toast(msg)
         assert self.loginPage.get_toast(msg) == msg
 
+
     @pytest.mark.parametrize("user, pw", [
         ("19100129893", "666666",)
     ])

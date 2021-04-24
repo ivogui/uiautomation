@@ -1,4 +1,4 @@
-
+import requests
 from time import sleep
 from zikaow.Page.basepage import BasePage
 
@@ -43,6 +43,9 @@ class Login(BasePage):
 
     def back(self):   # 返回操作
         self.steps('../TestData/login.yml', 'back')
+
+    def Cancel_account(self):
+        a = requests.post("http://www.360xkw.com/tiku/user/recoverUserLogoutStatusNoLogin.do?", params="19100129893")
 
 
 

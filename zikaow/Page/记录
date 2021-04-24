@@ -72,9 +72,12 @@ com.zikao.eduol:id/iv_login_copy_back
 列表级父类resource-id：com.zikao.eduol:id/shop_smart_refresh
 列表级父类resource-id：com.zikao.eduol:id/shop_scroll_view
 
-android.widget.RelativeLayout
+          android.support.v7.widget.RecyclerView
+          android.widget.FrameLayout
+          android.widget.RelativeLayout
+          android.widget.ImageView
 父类class：android.widget.FrameLayout  index 0~129
-书籍图片：com.zikao.eduol:id/item_book_icon
+书籍图片：com.zikao.eduol:id/item_book_icon                  X10 1060   Y1410 320
 标题：com.zikao.eduol:id/item_book_title
 描述：com.zikao.eduol:id/item_book_hint
 ¥币种：com.zikao.eduol:id/item_book_price_hint

@@ -74,12 +74,13 @@ class BasePage:
         try:
             self._driver.find_element(by=by, value=value)
         except Exception as e:
-            self._errorCount += 1
-            if self._errorCount >= self._errorMax:
-                raise e
+            print(e)
             return False
         else:
             return True
+
+    def get_webView(self):
+        pass
 
     def steps(self, path, key, **kwargs):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
         with open(path, 'r', encoding='utf-8') as f:
@@ -104,6 +105,10 @@ class BasePage:
                         action = TouchAction(self._driver)
                         action.press(x=step['value'][0]['x_start'], y=step['value'][0]['y_start']).wait(300) \
                             .move_to(x=step['value'][1]['x_end'], y=step['value'][1]['y_end']).release().perform()
+                    if 'attribute' == step['action']:
+                        element.get_attribute("text")
+                    # if 'image' == step['action']:
+                    #     element.get_attribute("image")
                 # 断言
                 if 'assertion' in step.keys():
                     if "sleep" in step['assertion'].keys():

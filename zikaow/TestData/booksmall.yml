@@ -2,3 +2,113 @@ Books_Mall:
   - by: id
     locator: com.zikao.eduol:id/tv_book_shop
     action: click
+bookList:
+  - by: id
+    locator: android:id/content
+    action: TouchAction
+    value:
+      - x_start: 539
+        y_start: 2131
+      - x_end: 539
+        y_end: 700
+#  - by: id
+#    locator: com.zikao.eduol:id/item_book_title
+#    action: attribute
+#  - by: id
+#    locator: com.zikao.eduol:id/item_book_hint
+#    action: attribute
+#  - by: id
+#    locator: com.zikao.eduol:id/item_book_price
+#    action: attribute
+#  - by: id
+#    locator: com.zikao.eduol:id/item_book_sales
+#    action: attribute
+#bookDetails:
+#  - by: id
+#    locator: com.zikao.eduol:id/tv_book_shop
+#    action: click
+#  - by: xpath
+#    locator: //*[@class='android.widget.FrameLayout' and @index='3'] pass
+#    action: click
+#  - by:
+#    locator: //*[@resource-id,'item_book_title' and @text='00015英语(二)']
+#    action:
+#  - by:
+#    locator: //*[contains(@text,'00015')]   pass
+#    action:
+#  - by:
+#    locator: //*[contains(@resource-id,'item_book_hint') and @]
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#ConfirmOrder:
+#  - by: id
+#    locator: com.zikao.eduol:id/tv_book_shop
+#    action: click
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+#  - by:
+#    locator:
+#    action:
+books_back:
+  - by: id
+    locator: android:id/content
+    action: TouchAction
+    value:
+      - x_start: 20
+        y_start: 1222
+      - x_end: 700
+        y_end: 1222

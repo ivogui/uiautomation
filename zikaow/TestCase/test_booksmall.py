@@ -7,16 +7,16 @@ class TestLogin:
 
     def setup(self):
         self.BooksMall = self.testDriver.go_homepage()
-        # self.loginPage = self.testDriver.go_my_login()
 
     def test_go_booksMall(self):
         self.BooksMall.Books_Mall()
 
-    def test(self):
-        pass
+    def test_get_book_list(self):
+        self.BooksMall.TextComparison()
+
 
     def teardown(self):
-        pass
+        self.BooksMall.books_back()
 
     def teardown_class(self):
         self.testDriver.quit()
