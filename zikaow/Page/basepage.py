@@ -70,6 +70,11 @@ class BasePage:
                 raise e  # 大于错误次数，抛出异常
             raise e
 
+    # def get_information(self, text, aa):
+        # locator = "//*[@class='android.widget.FrameLayout' and @index='%s']" % text
+        # xxx = "%s" % aa
+        # f'{locator}{xxx}'
+
     def isElementPresent(self, by, value):  # 判断页面某一个元素是否存在
         try:
             self._driver.find_element(by=by, value=value)
@@ -78,9 +83,6 @@ class BasePage:
             return False
         else:
             return True
-
-    def get_webView(self):
-        pass
 
     def steps(self, path, key, **kwargs):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
         with open(path, 'r', encoding='utf-8') as f:

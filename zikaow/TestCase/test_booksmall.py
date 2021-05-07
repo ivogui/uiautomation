@@ -12,7 +12,7 @@ class TestLogin:
         self.BooksMall.Books_Mall()
 
     def test_get_book_list(self):
-        self.BooksMall.TextComparison()
+        self.BooksMall.slide()
 
 
     def teardown(self):

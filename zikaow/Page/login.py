@@ -1,4 +1,3 @@
-import requests
 from time import sleep
 from zikaow.Page.basepage import BasePage
 
@@ -19,7 +18,7 @@ class Login(BasePage):
             self.logout()
             return self.loginByPassword(account, password)
 
-    def login_SMS(self, account, password):
+    def login_SMS(self, account, password):  # 验证码登录，还需要进一步扩展获取短信验证码文本，并填入输入框内
         if self.isElementPresent("xpath", "//*[contains(@text,'登录 / 注册')]") is True:
             self.steps('../TestData/login.yml', 'login_SMS', var1=account, var2=password)
         else:
@@ -44,8 +43,6 @@ class Login(BasePage):
     def back(self):   # 返回操作
         self.steps('../TestData/login.yml', 'back')
 
-    def Cancel_account(self):
-        a = requests.post("http://www.360xkw.com/tiku/user/recoverUserLogoutStatusNoLogin.do?", params="19100129893")
 
 
 

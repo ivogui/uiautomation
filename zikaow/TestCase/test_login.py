@@ -17,7 +17,7 @@ class TestLogin:
         ("19100129893", "000000", "登入失败,账号或密码错误！")
     ])
     @pytest.mark.run(order=1)
-    def test_log_error(self, user, pw, msg):
+    def test_log_error(self, user, pw, msg):   # 测试用例：账号密码错误登录
         self.loginPage.loginByPassword(user, pw)
         self.loginPage.get_toast(msg)
         assert self.loginPage.get_toast(msg) == msg
@@ -26,11 +26,11 @@ class TestLogin:
         ("19100129893", "666666",)
     ])
     @pytest.mark.run(order=2)
-    def test_login_normal(self, user, pw):
+    def test_login_normal(self, user, pw):  # 测试用例：账号密码正确登录
         self.loginPage.loginByPassword(user, pw)
 
     @pytest.mark.run(order=3)
-    def test_daily_login(self):
+    def test_daily_login(self):   # 测试用例：一键登录
         self.testDriver.go_my_login().oneclicklogin()
 
     @pytest.mark.parametrize("user, pw, msg", [
@@ -40,17 +40,16 @@ class TestLogin:
         ("19100129893", "000000", "登录失败，验证码错误")
     ])
     @pytest.mark.run(order=4)
-    def test_sms_login_error(self, user, pw, msg):
+    def test_sms_login_error(self, user, pw, msg):  # 测试用例：验证错错误登录
         self.loginPage.login_SMS(user, pw)
         self.loginPage.get_toast(msg)
         assert self.loginPage.get_toast(msg) == msg
-
 
     @pytest.mark.parametrize("user, pw", [
         ("19100129893", "666666",)
     ])
     @pytest.mark.run(order=5)
-    def test_sms_login_normal(self, user, pw):  # 还没有真正的获取验证码，待优化
+    def test_sms_login_normal(self, user, pw):  # 测试用例：正确登录；还没有真正的获取验证码，待优化
         self.loginPage.login_SMS(user, pw)
 
     def teardown(self):  # 方法执行完执行一次

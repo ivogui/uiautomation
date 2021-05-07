@@ -11,6 +11,11 @@ bookList:
         y_start: 2131
       - x_end: 539
         y_end: 700
+Bookinformation:
+  - by: xpath
+    locator: //*[@class='android.widget.FrameLayout' and @index='1']//*[@resource-id='com.zikao.eduol:id/item_book_price']
+    action: attribute
+
 #  - by: id
 #    locator: com.zikao.eduol:id/item_book_title
 #    action: attribute
