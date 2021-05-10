@@ -2,7 +2,7 @@ Books_Mall:
   - by: id
     locator: com.zikao.eduol:id/tv_book_shop
     action: click
-bookList:
+slide:
   - by: id
     locator: android:id/content
     action: TouchAction
