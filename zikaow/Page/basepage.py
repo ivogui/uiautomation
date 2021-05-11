@@ -70,11 +70,6 @@ class BasePage:
                 raise e  # 大于错误次数，抛出异常
             raise e
 
-    # def get_information(self, text, aa):
-        # locator = "//*[@class='android.widget.FrameLayout' and @index='%s']" % text
-        # xxx = "%s" % aa
-        # f'{locator}{xxx}'
-
     def isElementPresent(self, by, value):  # 判断页面某一个元素是否存在
         try:
             self._driver.find_element(by=by, value=value)
@@ -105,7 +100,7 @@ class BasePage:
                         element.send_keys(value)
                     if 'TouchAction' in step['action']:  # 滑动操作
                         action = TouchAction(self._driver)
-                        action.press(x=step['value'][0]['x_start'], y=step['value'][0]['y_start']).wait(300) \
+                        action.press(x=step['value'][0]['x_start'], y=step['value'][0]['y_start']).wait(600) \
                             .move_to(x=step['value'][1]['x_end'], y=step['value'][1]['y_end']).release().perform()
                     if 'attribute' == step['action']:
                         element.get_attribute("text")
