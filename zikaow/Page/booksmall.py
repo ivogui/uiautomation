@@ -49,3 +49,30 @@ class BooksMall(BasePage):
         info1 = "//*[@resource-id='com.zikao.eduol:id/item_book_%s']" % text
         return info1
 
+    def assert_info(self, pos, text):
+        print("--------------b手机数据---------------")
+        aa = self.get_book_element(pos, "title")
+        print(aa)
+        bb = self.get_book_element(pos, "hint")
+        print(bb)
+        cc = self.get_book_element(pos, "price")
+        cc1 = int(cc)
+        print(cc1)
+        dd = self.get_book_element(pos, "sales")
+        print(dd)
+        print("-------------b接口数据----------------")
+        dict1 = self.get_value(pos, 'title')
+        print(dict1)
+        a = dict1['name']
+        print(a)
+        b = dict1['briefIntroduction']
+        print(b)
+        c = dict1['discountPrice']
+        print(c)
+        d = dict1['sales']
+        d1 = f'{d}{"人付款"}'
+        print(d1)
+        assert aa == a
+        assert bb == b
+        assert cc1 == c
+        assert dd == d1

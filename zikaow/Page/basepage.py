@@ -71,13 +71,20 @@ class BasePage:
             raise e
 
     def isElementPresent(self, by, value):  # 判断页面某一个元素是否存在
-        try:
-            self._driver.find_element(by=by, value=value)
-        except Exception as e:
-            print(e)
-            return False
-        else:
+        # try:
+        self._driver.find_element(by=by, value=value)
+        # except Exception as e:
+        #     print(e)
+        #     return False
+        # else:
+        #     return True
+
+    def findItem(self, el):  # 获取整个页面的元素，并判断是否包含传进来的参数
+        source = self._driver.page_source
+        if el in source:
             return True
+        else:
+            return False
 
     def steps(self, path, key, **kwargs):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
         with open(path, 'r', encoding='utf-8') as f:
@@ -100,7 +107,7 @@ class BasePage:
                         element.send_keys(value)
                     if 'TouchAction' in step['action']:  # 滑动操作
                         action = TouchAction(self._driver)
-                        action.press(x=step['value'][0]['x_start'], y=step['value'][0]['y_start']).wait(600) \
+                        action.press(x=step['value'][0]['x_start'], y=step['value'][0]['y_start']).wait(300) \
                             .move_to(x=step['value'][1]['x_end'], y=step['value'][1]['y_end']).release().perform()
                     if 'attribute' == step['action']:
                         element.get_attribute("text")
