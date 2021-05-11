@@ -7,18 +7,12 @@ class BooksMall(BasePage):
     def Books_Mall(self):  # 进入书籍商城
         self.steps('../TestData/booksmall.yml', 'Books_Mall')
 
-    def slide(self):  # 暂时无用
-        self.steps('../TestData/booksmall.yml', 'Books_Mall')
-        while True:
-            if self.isElementPresent("xpath", "//*[@class='android.widget.FrameLayout' "
-                                              "and @index='1']") is False:
+    def slide(self, pos, text):  # 书籍商城滑动找书
+        while self.findItem(self.get_book_element(pos, text)) is True:
+            if self.findItem(self.get_book_element(pos, text)) is False:
                 self.steps('../TestData/booksmall.yml', 'slide')
-            elif self.isElementPresent("xpath", "//*[@class='android.widget.FrameLayout' "
-                                                "and @index='1']") is True:
-                pass
-
-            elif self.isElementPresent("id", "com.zikao.eduol:id/bottom_line_tv") is True:
-                break
+            else:
+                return self.get_book_element(pos, text)
 
     def books_back(self):  # 返回操作
         self.steps('../TestData/booksmall.yml', 'books_back')
@@ -49,30 +43,3 @@ class BooksMall(BasePage):
         info1 = "//*[@resource-id='com.zikao.eduol:id/item_book_%s']" % text
         return info1
 
-    def assert_info(self, pos, text):
-        print("--------------b手机数据---------------")
-        aa = self.get_book_element(pos, "title")
-        print(aa)
-        bb = self.get_book_element(pos, "hint")
-        print(bb)
-        cc = self.get_book_element(pos, "price")
-        cc1 = int(cc)
-        print(cc1)
-        dd = self.get_book_element(pos, "sales")
-        print(dd)
-        print("-------------b接口数据----------------")
-        dict1 = self.get_value(pos, 'title')
-        print(dict1)
-        a = dict1['name']
-        print(a)
-        b = dict1['briefIntroduction']
-        print(b)
-        c = dict1['discountPrice']
-        print(c)
-        d = dict1['sales']
-        d1 = f'{d}{"人付款"}'
-        print(d1)
-        assert aa == a
-        assert bb == b
-        assert cc1 == c
-        assert dd == d1

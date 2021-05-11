@@ -71,13 +71,13 @@ class BasePage:
             raise e
 
     def isElementPresent(self, by, value):  # 判断页面某一个元素是否存在
-        # try:
-        self._driver.find_element(by=by, value=value)
-        # except Exception as e:
-        #     print(e)
-        #     return False
-        # else:
-        #     return True
+        try:
+            self._driver.find_element(by=by, value=value)
+        except Exception as e:
+            print(e)
+            return False
+        else:
+            return True
 
     def findItem(self, el):  # 获取整个页面的元素，并判断是否包含传进来的参数
         source = self._driver.page_source
