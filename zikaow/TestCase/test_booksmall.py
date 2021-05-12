@@ -12,7 +12,7 @@ class TestLogin:
     def test_go_booksMall(self):
         self.BooksMall.Books_Mall()
 
-    @pytest.mark.parametrize("pos", [pos for pos in range(1, 5)])
+    @pytest.mark.parametrize("pos", [pos for pos in range(1, 250)])
     def test_get_book_list(self, pos):
         self.BooksMall.Books_Mall()
 

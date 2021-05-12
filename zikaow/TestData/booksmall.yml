@@ -10,7 +10,7 @@ slide:
       - x_start: 539
         y_start: 1700
       - x_end: 539
-        y_end: 880
+        y_end: 900
 Bookinformation:
   - by: xpath
     locator: //*[@class='android.widget.FrameLayout' and @index='1']//*[@resource-id='com.zikao.eduol:id/item_book_price']
