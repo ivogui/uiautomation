@@ -1,0 +1,87 @@
+{
+  "uid" : "4ab24d50a9860364",
+  "name" : "账号密码错误登录",
+  "fullName" : "test_login.TestLogin#test_log_error",
+  "historyId" : "1034e110d129fb8953f18dab06885601",
+  "time" : {
+    "start" : 1622515860988,
+    "stop" : 1622515868283,
+    "duration" : 7295
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e769b8dea42c8ef",
+      "name" : "4e0bc978-830c-4bc7-803b-99aaba683ccc-attachment.png",
+      "source" : "e769b8dea42c8ef.png",
+      "type" : "image/png",
+      "size" : 178970
+    }, {
+      "uid" : "118355db9ca99ee4",
+      "name" : "stdout",
+      "source" : "118355db9ca99ee4.txt",
+      "type" : "text/plain",
+      "size" : 149
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "用户登录模块"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "MicroWin10-1243"
+  }, {
+    "name" : "thread",
+    "value" : "15928-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "msg",
+    "value" : "'请输入密码'"
+  }, {
+    "name" : "pw",
+    "value" : "''"
+  }, {
+    "name" : "user",
+    "value" : "'1910012989'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4ab24d50a9860364.json",
+  "parameterValues" : [ "'请输入密码'", "''", "'1910012989'" ]
+}

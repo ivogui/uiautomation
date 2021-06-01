@@ -1,0 +1,52 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_login",
+    "children" : [ {
+      "name" : "TestLogin",
+      "children" : [ {
+        "name" : "账号密码错误登录",
+        "uid" : "68b57497168b9909",
+        "parentUid" : "e75455cf76bd95e9050e793836e5ab99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622515845236,
+          "stop" : 1622515859288,
+          "duration" : 14052
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入账号'", "''", "''" ]
+      }, {
+        "name" : "账号密码错误登录",
+        "uid" : "4ab24d50a9860364",
+        "parentUid" : "e75455cf76bd95e9050e793836e5ab99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622515860988,
+          "stop" : 1622515868283,
+          "duration" : 7295
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入密码'", "''", "'1910012989'" ]
+      }, {
+        "name" : "账号密码错误登录",
+        "uid" : "a4f3a2b3214c4e83",
+        "parentUid" : "e75455cf76bd95e9050e793836e5ab99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622515869795,
+          "stop" : 1622515877509,
+          "duration" : 7714
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'账号错误'", "'123456'", "'1910012'" ]
+      } ],
+      "uid" : "e75455cf76bd95e9050e793836e5ab99"
+    } ],
+    "uid" : "7db21133bf389fa43eef71e3fe0b0e68"
+  } ]
+}

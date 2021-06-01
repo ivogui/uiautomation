@@ -1,6 +1,6 @@
 from zikaow.Page.basepage import BasePage
 import requests
-
+import pytest
 
 class BooksMall(BasePage):
 
@@ -8,7 +8,6 @@ class BooksMall(BasePage):
         self.steps('../TestData/booksmall.yml', 'Books_Mall')
 
     def slide(self, pos, text):  # 书籍商城滑动找书
-        # while self.findItem(self.get_book_element(pos, text)) is True:
         if self.isElementPresent('xpath', f'{self.get_pos(pos)}{self.get_info(text)}') is False:
             self.steps('../TestData/booksmall.yml', 'slide')
             return self.slide(pos, text)
@@ -43,4 +42,16 @@ class BooksMall(BasePage):
     def get_info(self, text):  # 书属性xpath，通过text参数传递获取的属性
         info1 = "//*[@resource-id='com.zikao.eduol:id/item_book_%s']" % text
         return info1
+
+    # @pytest.mark.parametrize("pos", [pos for pos in range(1, 250)])
+    # def get_book_info(self, pos):
+    #     self.steps('../TestData/booksmall.yml', 'Books_Mall')
+    #     aaa = ['title', 'hint', 'price', 'sales']
+    #     aa = self.slide(pos, 'title')
+    #     bb = self.slide(pos, 'hint')
+    #     cc = self.slide(pos, 'price')
+    #     cc1 = int(cc)
+    #     dd = self.slide(pos, 'sales')
+
+
 

@@ -1,0 +1,52 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "MicroWin10-1243",
+    "children" : [ {
+      "name" : "15928-MainThread",
+      "children" : [ {
+        "name" : "账号密码错误登录",
+        "uid" : "a4f3a2b3214c4e83",
+        "parentUid" : "5d125d93040ec4a3483d4321cfb8ee28",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622515869795,
+          "stop" : 1622515877509,
+          "duration" : 7714
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'账号错误'", "'123456'", "'1910012'" ]
+      }, {
+        "name" : "账号密码错误登录",
+        "uid" : "4ab24d50a9860364",
+        "parentUid" : "5d125d93040ec4a3483d4321cfb8ee28",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622515860988,
+          "stop" : 1622515868283,
+          "duration" : 7295
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入密码'", "''", "'1910012989'" ]
+      }, {
+        "name" : "账号密码错误登录",
+        "uid" : "68b57497168b9909",
+        "parentUid" : "5d125d93040ec4a3483d4321cfb8ee28",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622515845236,
+          "stop" : 1622515859288,
+          "duration" : 14052
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入账号'", "''", "''" ]
+      } ],
+      "uid" : "5d125d93040ec4a3483d4321cfb8ee28"
+    } ],
+    "uid" : "809e7c3bbd5b105611a36e58832c693b"
+  } ]
+}

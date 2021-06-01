@@ -1,4 +1,6 @@
 # coding=utf-8
+import datetime
+
 from selenium.webdriver.support.wait import WebDriverWait
 from appium.webdriver.webdriver import WebDriver
 from appium.webdriver.common.touch_action import TouchAction
@@ -78,6 +80,12 @@ class BasePage:
             return False
         else:
             return True
+
+    def get_screen(self, path):  # 获取截图
+        now = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
+        screen_shot = path + 'a_' + now + '.png'
+        self._driver.get_screenshot_as_file(screen_shot)
+        return screen_shot
 
     def findItem(self, el):  # 获取整个页面的元素，并判断是否包含传进来的参数
         source = self._driver.page_source
