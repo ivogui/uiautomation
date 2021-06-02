@@ -1,5 +1,8 @@
 Books_Mall:
   - by: id
+    locator: com.zikao.eduol:id/rb_home
+    action: click
+  - by: id
     locator: com.zikao.eduol:id/tv_book_shop
     action: click
 slide:
@@ -15,6 +18,10 @@ Bookinformation:
   - by: xpath
     locator: //*[@class='android.widget.FrameLayout' and @index='1']//*[@resource-id='com.zikao.eduol:id/item_book_price']
     action: attribute
+buy:
+  - by: id
+    locator: com.zikao.eduol:id/shop_detail_buy
+    action: click
 
 #  - by: id
 #    locator: com.zikao.eduol:id/item_book_title

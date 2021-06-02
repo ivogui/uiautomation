@@ -15,6 +15,10 @@ class Main(BasePage):
         return Login(self._driver)
 
     def go_homepage(self):  # 进入首页
-        self.steps('../TestData/main.yml', 'go_homepage')
-        print('----点击打开-首页-页面----')
-        return BooksMall(self._driver)
+        if self.isElementPresent("id", "com.zikao.eduol:id/et_search") is True:
+            print('----当前已在书城页面-----')
+            return BooksMall(self._driver)
+        else:
+            self.steps('../TestData/main.yml', 'go_homepage')
+            print('----点击打开-首页-页面----')
+            return BooksMall(self._driver)

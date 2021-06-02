@@ -58,6 +58,22 @@ class BasePage:
                     return self.find(by, locator)
             raise e
 
+    def get_element(self, by, locator, text):
+        try:
+            a_element = self._driver.find_element(by, locator).get_attribute(text)
+            self._errorCount = 0
+            return a_element
+        except Exception as e:
+            self._errorCount += 1
+            if self._errorCount >= self._errorMax:
+                raise e  # 大于错误次数，抛出异常
+            for black in self._blackList:
+                elements = self._driver.find_element(*black)
+                if len(elements) > 0:
+                    elements[0].click()
+                    return self.find(by, locator)
+            raise e
+
     def get_toast(self, text):  # 获取toast
         toast_loc = "//*[contains(@text,'%s')]" % text
         #  使用显示等待（页面停留3秒，0.01秒获取一次元素）

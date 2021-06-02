@@ -2,12 +2,15 @@ from zikaow.Page.basepage import BasePage
 import requests
 import pytest
 
+
 class BooksMall(BasePage):
 
     def Books_Mall(self):  # 进入书籍商城
         self.steps('../TestData/booksmall.yml', 'Books_Mall')
 
     def slide(self, pos, text):  # 书籍商城滑动找书
+        if self.isElementPresent('id', 'com.zikao.eduol:id/et_search') is False:
+            self.Books_Mall()
         if self.isElementPresent('xpath', f'{self.get_pos(pos)}{self.get_info(text)}') is False:
             self.steps('../TestData/booksmall.yml', 'slide')
             return self.slide(pos, text)
@@ -43,15 +46,12 @@ class BooksMall(BasePage):
         info1 = "//*[@resource-id='com.zikao.eduol:id/item_book_%s']" % text
         return info1
 
-    # @pytest.mark.parametrize("pos", [pos for pos in range(1, 250)])
-    # def get_book_info(self, pos):
-    #     self.steps('../TestData/booksmall.yml', 'Books_Mall')
-    #     aaa = ['title', 'hint', 'price', 'sales']
-    #     aa = self.slide(pos, 'title')
-    #     bb = self.slide(pos, 'hint')
-    #     cc = self.slide(pos, 'price')
-    #     cc1 = int(cc)
-    #     dd = self.slide(pos, 'sales')
+    def get_pos_click(self, pos):
+        self._driver.find_element_by_xpath(self.get_pos(pos)).click()
+
+
+
+
 
 
 
