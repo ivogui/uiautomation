@@ -6,3 +6,7 @@ go_homepage:
   - by: id
     locator: com.zikao.eduol:id/rb_home
     action: click
+go_Elective:
+  - by: id
+    locator: com.zikao.eduol:id/rb_course
+    action: click

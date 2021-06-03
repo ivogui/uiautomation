@@ -6,7 +6,8 @@ import os
 import threading
 
 
-class TestLogin:
+@allure.feature('书城模块')
+class TestMall:
     def setup_class(self):
         self.testDriver = App().restart().main()
         shutil.rmtree('../TestCase/report/images/')
@@ -18,8 +19,24 @@ class TestLogin:
     def test_go_booksMall(self):
         self.BooksMall.Books_Mall()
 
+    # @allure.title('搜索')
+    # def test_as(self):
+    #     pass
+    # @allure.title('筛选')
+    # def test_ba(self):
+    #     pass
+    # @allure.title('商品详情：评论点赞+推荐课程')
+    # def test_ba(self):
+    #     pass
+    # @allure.title('确认订单：支付方式+学生留言+支付')
+    # def test_ba(self):
+    #     pass
+    # @allure.title('分享+交流群')
+    # def test_ba(self):
+    #     pass
+
     @allure.title('书籍商城-商品列表')
-    @pytest.mark.parametrize("pos", [pos for pos in range(4, 10)])
+    @pytest.mark.parametrize("pos", [pos for pos in range(1, 10)])
     def test_get_book_list(self, pos):
         print("--------------b手机数据---------------")
         aa = self.BooksMall.slide(pos, 'title')
@@ -40,8 +57,7 @@ class TestLogin:
         c = dict1['discountPrice']
         print(c)
         d = dict1['sales']
-        d1 = f'{d}{"人付款"}'
-        print(d1)
+        print(d)
         print("-------------m书籍详情----------------")
         self.BooksMall.get_pos_click(pos)
         aaa = self.BooksMall.get_element("id", "com.zikao.eduol:id/shop_detail_name", "text")
@@ -53,7 +69,7 @@ class TestLogin:
         ddd = self.BooksMall.get_element("id", "com.zikao.eduol:id/shop_detail_count", "text")
         print(ddd)
         allure.attach.file(self.BooksMall.get_screen('../TestCase/report/images/'),
-                           attachment_type=allure.attachment_type.PNG)
+                           '书籍详情', attachment_type=allure.attachment_type.PNG)
         print("-------------v付款页面----------------")
         self.BooksMall.steps('../TestData/booksmall.yml', 'buy')
         fa = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_title", "text")
@@ -62,21 +78,24 @@ class TestLogin:
         print(fb)
         fc = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_price", "text")
         print(fc)
+        allure.attach.file(self.BooksMall.get_screen('../TestCase/report/images/'),
+                           '付款页面', attachment_type=allure.attachment_type.PNG)
         self.BooksMall.books_back()
+
         assert aa == a
         assert aa == aaa
         assert aa == fa
 
-        # assert bb == b
-        # assert bb == bbb
-        # assert bb == fb
+        assert bb[:10] == b[:10]
+        assert bb[:10] == bbb[:10]
+        assert bb[:10] == fb[:10]
 
         assert int(cc) == c
         assert cc == ccc
         assert cc == fc
-        # assert  == fb
 
-        assert dd == d1
+        assert int(dd[:-3]) == d
+        assert dd[:-3] == ddd[:-3]
 
     def teardown(self):
         self.BooksMall.books_back()

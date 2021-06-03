@@ -1,0 +1,5 @@
+----点击打开-我的-页面----
+update value: $var1 19100129893
+update value: 19100129893 19100129893
+update value: $var2 $var2
+update value: $var2 000000

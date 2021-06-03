@@ -1,0 +1,5 @@
+----点击打开-我的-页面----
+update value: $var1 
+update value:  
+update value: $var2 $var2
+update value: $var2 

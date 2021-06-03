@@ -22,3 +22,11 @@ class Main(BasePage):
             self.steps('../TestData/main.yml', 'go_homepage')
             print('----点击打开-首页-页面----')
             return BooksMall(self._driver)
+
+    def go_Elective(self):  # 进入选课
+        self.steps('../TestData/main.yml', 'go_Elective')
+        print('----点击打开-选课-页面----')
+        return Login(self._driver)
+
+
+

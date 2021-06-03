@@ -1,0 +1,117 @@
+{
+  "uid" : "6a8c8431a3830b41",
+  "name" : "账号密码错误登录",
+  "fullName" : "test_login.TestLogin#test_log_error",
+  "historyId" : "1034e110d129fb8953f18dab06885601",
+  "time" : {
+    "start" : 1622712815272,
+    "stop" : 1622712822599,
+    "duration" : 7327
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestLogin",
+    "time" : {
+      "start" : 1622712787059,
+      "stop" : 1622712793971,
+      "duration" : 6912
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "5e37609f4e896043",
+      "name" : "4709ce1a-144e-4cb0-b7df-206204db2faa-attachment.png",
+      "source" : "5e37609f4e896043.png",
+      "type" : "image/png",
+      "size" : 179286
+    }, {
+      "uid" : "dd8b38c15b1f742b",
+      "name" : "stdout",
+      "source" : "dd8b38c15b1f742b.txt",
+      "type" : "text/plain",
+      "size" : 149
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestLogin::0",
+    "time" : {
+      "start" : 1622712918921,
+      "stop" : 1622712919376,
+      "duration" : 455
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "用户登录模块"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "MicroWin10-1243"
+  }, {
+    "name" : "thread",
+    "value" : "6380-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "msg",
+    "value" : "'请输入密码'"
+  }, {
+    "name" : "pw",
+    "value" : "''"
+  }, {
+    "name" : "user",
+    "value" : "'1910012989'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6a8c8431a3830b41.json",
+  "parameterValues" : [ "'请输入密码'", "''", "'1910012989'" ]
+}

@@ -4,48 +4,152 @@
   "children" : [ {
     "name" : "MicroWin10-1243",
     "children" : [ {
-      "name" : "15928-MainThread",
+      "name" : "6380-MainThread",
       "children" : [ {
-        "name" : "账号密码错误登录",
-        "uid" : "a4f3a2b3214c4e83",
-        "parentUid" : "5d125d93040ec4a3483d4321cfb8ee28",
+        "name" : "验证错错误登录",
+        "uid" : "82f50d7287d7ee6a",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
         "status" : "passed",
         "time" : {
-          "start" : 1622515869795,
-          "stop" : 1622515877509,
-          "duration" : 7714
+          "start" : 1622712865574,
+          "stop" : 1622712878205,
+          "duration" : 12631
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "'账号错误'", "'123456'", "'1910012'" ]
+        "parameters" : [ "'请输入手机号'", "''", "''" ]
       }, {
-        "name" : "账号密码错误登录",
-        "uid" : "4ab24d50a9860364",
-        "parentUid" : "5d125d93040ec4a3483d4321cfb8ee28",
+        "name" : "验证错错误登录",
+        "uid" : "3476b7d608af7459",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
         "status" : "passed",
         "time" : {
-          "start" : 1622515860988,
-          "stop" : 1622515868283,
-          "duration" : 7295
+          "start" : 1622712887624,
+          "stop" : 1622712894167,
+          "duration" : 6543
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'账号错误'", "'123456'", "'19100129'" ]
+      }, {
+        "name" : "账号密码正确登录",
+        "uid" : "86884e8673d6e8a7",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622712842861,
+          "stop" : 1622712850838,
+          "duration" : 7977
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'登入成功！'", "'123456'", "'19100129893'" ]
+      }, {
+        "name" : "账号密码错误登录",
+        "uid" : "9eca51d91e73fd74",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622712800419,
+          "stop" : 1622712813557,
+          "duration" : 13138
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入账号'", "''", "''" ]
+      }, {
+        "name" : "一键登录",
+        "uid" : "6303ba5723cbefeb",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622712852371,
+          "stop" : 1622712863654,
+          "duration" : 11283
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "账号密码错误登录",
+        "uid" : "9cbe73276ad1fbc8",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622712832970,
+          "stop" : 1622712841371,
+          "duration" : 8401
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'登入失败,账号或密码错误！'", "'000000'", "'19100129893'" ]
+      }, {
+        "name" : "验证错错误登录",
+        "uid" : "206d6cab23b48021",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622712879663,
+          "stop" : 1622712886201,
+          "duration" : 6538
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入验证码'", "''", "'19100129893'" ]
+      }, {
+        "name" : "验证码正确登录",
+        "uid" : "3ac5450707f70d1b",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "broken",
+        "time" : {
+          "start" : 1622712903938,
+          "stop" : 1622712917403,
+          "duration" : 13465
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'登入成功！'", "'666666'", "'19100129893'" ]
+      }, {
+        "name" : "验证错错误登录",
+        "uid" : "af3e21a1dcc63f30",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622712895584,
+          "stop" : 1622712902515,
+          "duration" : 6931
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'登录失败，验证码错误'", "'000000'", "'19100129893'" ]
+      }, {
+        "name" : "账号密码错误登录",
+        "uid" : "6a8c8431a3830b41",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
+        "status" : "passed",
+        "time" : {
+          "start" : 1622712815272,
+          "stop" : 1622712822599,
+          "duration" : 7327
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "'请输入密码'", "''", "'1910012989'" ]
       }, {
         "name" : "账号密码错误登录",
-        "uid" : "68b57497168b9909",
-        "parentUid" : "5d125d93040ec4a3483d4321cfb8ee28",
+        "uid" : "bb26ca9cdaf92012",
+        "parentUid" : "3408cd4305b5757934d2dc3478dba974",
         "status" : "passed",
         "time" : {
-          "start" : 1622515845236,
-          "stop" : 1622515859288,
-          "duration" : 14052
+          "start" : 1622712824099,
+          "stop" : 1622712831260,
+          "duration" : 7161
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "'请输入账号'", "''", "''" ]
+        "parameters" : [ "'账号错误'", "'123456'", "'1910012'" ]
       } ],
-      "uid" : "5d125d93040ec4a3483d4321cfb8ee28"
+      "uid" : "3408cd4305b5757934d2dc3478dba974"
     } ],
     "uid" : "809e7c3bbd5b105611a36e58832c693b"
   } ]
