@@ -10,8 +10,8 @@ import threading
 class TestMall:
     def setup_class(self):
         self.testDriver = App().restart().main()
-        shutil.rmtree('../TestCase/report/images/')
-        os.mkdir('../TestCase/report/images/')
+        # shutil.rmtree('../TestCase/report/images/')
+        # os.mkdir('../TestCase/report/images/')
 
     def setup(self):
         self.BooksMall = self.testDriver.go_homepage()
@@ -68,7 +68,7 @@ class TestMall:
         print(ccc)
         ddd = self.BooksMall.get_element("id", "com.zikao.eduol:id/shop_detail_count", "text")
         print(ddd)
-        allure.attach.file(self.BooksMall.get_screen('../TestCase/report/images/'),
+        allure.attach.file(self.BooksMall.get_screen('./TestCase/report/images/'),
                            '书籍详情', attachment_type=allure.attachment_type.PNG)
         print("-------------v付款页面----------------")
         self.BooksMall.steps('../TestData/booksmall.yml', 'buy')
@@ -78,7 +78,7 @@ class TestMall:
         print(fb)
         fc = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_price", "text")
         print(fc)
-        allure.attach.file(self.BooksMall.get_screen('../TestCase/report/images/'),
+        allure.attach.file(self.BooksMall.get_screen('./TestCase/report/images/'),
                            '付款页面', attachment_type=allure.attachment_type.PNG)
         self.BooksMall.books_back()
 
