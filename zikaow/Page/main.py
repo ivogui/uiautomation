@@ -10,7 +10,7 @@ class Main(BasePage):
         self._driver.quit()
 
     def go_my_login(self):  # 进入我的
-        self.steps('../TestData/main.yml', 'go_my_login')
+        self.steps('\\TestData\\main.yml', 'go_my_login')
         print('----点击打开-我的-页面----')
         return Login(self._driver)
 
@@ -19,12 +19,12 @@ class Main(BasePage):
             print('----当前已在书城页面-----')
             return BooksMall(self._driver)
         else:
-            self.steps('../TestData/main.yml', 'go_homepage')
+            self.steps('\\TestData\\main.yml', 'go_homepage')
             print('----点击打开-首页-页面----')
             return BooksMall(self._driver)
 
     def go_Elective(self):  # 进入选课
-        self.steps('../TestData/main.yml', 'go_Elective')
+        self.steps('\\TestData\\main.yml', 'go_Elective')
         print('----点击打开-选课-页面----')
         return Login(self._driver)
 

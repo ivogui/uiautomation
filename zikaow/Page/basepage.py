@@ -1,6 +1,6 @@
 # coding=utf-8
 import datetime
-
+import os
 from selenium.webdriver.support.wait import WebDriverWait
 from appium.webdriver.webdriver import WebDriver
 from appium.webdriver.common.touch_action import TouchAction
@@ -111,7 +111,9 @@ class BasePage:
             return False
 
     def steps(self, path, key, **kwargs):  # 定义操作步骤的方法，用于通过编写配置文件，执行相关用例
-        with open(path, 'r', encoding='utf-8') as f:
+        file_path = os.path.dirname(os.path.dirname(__file__))
+        get_path = file_path + path
+        with open(get_path, 'r', encoding='utf-8') as f:
             steps: List[dict] = yaml.safe_load(f)  # 操作步骤的数据类型为：[{},{}]
             # 遍历操作步骤
             po_method = steps[key]

@@ -6,19 +6,19 @@ import pytest
 class BooksMall(BasePage):
 
     def Books_Mall(self):  # 进入书籍商城
-        self.steps('../TestData/booksmall.yml', 'Books_Mall')
+        self.steps('\\TestData\\booksmall.yml', 'Books_Mall')
 
     def slide(self, pos, text):  # 书籍商城滑动找书
         if self.isElementPresent('id', 'com.zikao.eduol:id/et_search') is False:
             self.Books_Mall()
         if self.isElementPresent('xpath', f'{self.get_pos(pos)}{self.get_info(text)}') is False:
-            self.steps('../TestData/booksmall.yml', 'slide')
+            self.steps('/TestData/booksmall.yml', 'slide')
             return self.slide(pos, text)
         else:
             return self.get_book_element(pos, text)
 
     def books_back(self):  # 返回操作
-        self.steps('../TestData/booksmall.yml', 'books_back')
+        self.steps('/TestData/booksmall.yml', 'books_back')
 
     def get_book_list(self):  # 通过requests.get获取接口.json数据
         a = requests.get('https://tk.360xkw.com/crgk/app/shop/getShopProductList?',

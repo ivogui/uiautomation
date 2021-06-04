@@ -4,6 +4,9 @@ import pytest
 import allure
 import os
 import threading
+file_path1 = os.path.dirname(__file__)
+aa = "\\report\\images\\"
+fuck = f'{file_path1}{aa}'
 
 
 @allure.feature('书城模块')
@@ -36,7 +39,7 @@ class TestMall:
     #     pass
 
     @allure.title('书籍商城-商品列表')
-    @pytest.mark.parametrize("pos", [pos for pos in range(1, 10)])
+    @pytest.mark.parametrize("pos", [pos for pos in range(1, 5)])
     def test_get_book_list(self, pos):
         print("--------------b手机数据---------------")
         aa = self.BooksMall.slide(pos, 'title')
@@ -68,17 +71,17 @@ class TestMall:
         print(ccc)
         ddd = self.BooksMall.get_element("id", "com.zikao.eduol:id/shop_detail_count", "text")
         print(ddd)
-        allure.attach.file(self.BooksMall.get_screen('./TestCase/report/images/'),
+        allure.attach.file(self.BooksMall.get_screen(fuck),
                            '书籍详情', attachment_type=allure.attachment_type.PNG)
         print("-------------v付款页面----------------")
-        self.BooksMall.steps('../TestData/booksmall.yml', 'buy')
+        self.BooksMall.steps('\\TestData\\booksmall.yml', 'buy')
         fa = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_title", "text")
         print(fa)
         fb = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_hint", "text")
         print(fb)
         fc = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_price", "text")
         print(fc)
-        allure.attach.file(self.BooksMall.get_screen('./TestCase/report/images/'),
+        allure.attach.file(self.BooksMall.get_screen(fuck),
                            '付款页面', attachment_type=allure.attachment_type.PNG)
         self.BooksMall.books_back()
 
