@@ -1,5 +1,0 @@
-----点击打开-我的-页面----
-update value: $var1 1910012989
-update value: 1910012989 1910012989
-update value: $var2 $var2
-update value: $var2 

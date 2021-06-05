@@ -1,0 +1,111 @@
+{
+  "uid" : "87d00fba45654a18",
+  "name" : "进入书城",
+  "fullName" : "TestCase.test_booksmall.TestMall#test_go_booksMall",
+  "historyId" : "1fe10e2dae06206a8eaca3f8409206ec",
+  "time" : {
+    "start" : 1622881398034,
+    "stop" : 1622881408260,
+    "duration" : 10226
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestMall",
+    "time" : {
+      "start" : 1622881383405,
+      "stop" : 1622881389815,
+      "duration" : 6410
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "243e2c7eab87966c",
+      "name" : "进入书城",
+      "source" : "243e2c7eab87966c.png",
+      "type" : "image/png",
+      "size" : 831370
+    }, {
+      "uid" : "e7151e2d99e5ca02",
+      "name" : "stdout",
+      "source" : "e7151e2d99e5ca02.txt",
+      "type" : "text/plain",
+      "size" : 213
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestMall::0",
+    "time" : {
+      "start" : 1622881555348,
+      "stop" : 1622881555762,
+      "duration" : 414
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "书城模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_booksmall"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMall"
+  }, {
+    "name" : "host",
+    "value" : "MicroWin10-1243"
+  }, {
+    "name" : "thread",
+    "value" : "10992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.test_booksmall"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "87d00fba45654a18.json",
+  "parameterValues" : [ ]
+}

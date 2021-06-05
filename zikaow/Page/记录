@@ -10,6 +10,9 @@
 一键登录：com.zikao.eduol:id/shanyan_view_bt_one_key_login
 
 账号登录：android.widget.ImageView index 6
+com.zikao.eduol:id/rtv_pop_alert_login
+com.zikao.eduol:id/rtv_pop_alert_cancel
+com.zikao.eduol:id/centerPopupContainer
 
 
 父类：验证码登记/密码登记：com.zikao.eduol:id/tl_login_copy

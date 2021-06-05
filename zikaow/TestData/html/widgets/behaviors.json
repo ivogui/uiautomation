@@ -1,24 +1,13 @@
 {
-  "total" : 2,
+  "total" : 1,
   "items" : [ {
-    "uid" : "05646e648af63fcfbd8167c4ad0a2d02",
-    "name" : "用户登录模块",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 8,
-      "skipped" : 0,
-      "passed" : 3,
-      "unknown" : 0,
-      "total" : 11
-    }
-  }, {
     "uid" : "f5c8b33e33d01045c3d17b2ee9a1bcf3",
     "name" : "书城模块",
     "statistic" : {
       "failed" : 0,
-      "broken" : 4,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 5,
       "unknown" : 0,
       "total" : 5
     }

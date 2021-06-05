@@ -29,6 +29,14 @@ class Login(BasePage):
         else:
             self.logout()
             return self.login_SMS(account, password)
+
+    def login_SMS1(self, account, password):  # 验证码登录，还需要进一步扩展获取短信验证码文本，并填入输入框内
+        if self.findItem(element1) is True:
+            self.steps('/TestData/login.yml', 'login_SMS1', var1=account, var2=password)
+        else:
+            self.logout()
+            return self.login_SMS1(account, password)
+
         # sleep(2)
         # # 打开通知栏
         # self._driver.open_notifications()

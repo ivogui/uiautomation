@@ -1,161 +1,51 @@
 [ {
-  "uid" : "dc06056288e689ee",
-  "name" : "一键登录",
+  "uid" : "87d00fba45654a18",
+  "name" : "进入书城",
   "time" : {
-    "start" : 1622794532195,
-    "stop" : 1622794532195,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "182fa2fc6663f93f",
-  "name" : "验证码正确登录",
-  "time" : {
-    "start" : 1622794573822,
-    "stop" : 1622794573822,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "2941a95816baaaad",
-  "name" : "书籍商城-商品列表",
-  "time" : {
-    "start" : 1622794609608,
-    "stop" : 1622794719691,
-    "duration" : 110083
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "938999ea9b421c28",
-  "name" : "test_go_booksMall",
-  "time" : {
-    "start" : 1622794598437,
-    "stop" : 1622794599616,
-    "duration" : 1179
+    "start" : 1622881398034,
+    "stop" : 1622881408260,
+    "duration" : 10226
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "16acef8ddceda332",
-  "name" : "验证错错误登录",
+  "uid" : "79f535981d10335a",
+  "name" : "书籍商城-商品列表",
   "time" : {
-    "start" : 1622794549059,
-    "stop" : 1622794549059,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "c5b0c9fd9ab73225",
-  "name" : "验证错错误登录",
-  "time" : {
-    "start" : 1622794557102,
-    "stop" : 1622794557102,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "69c09f5545bfc3f4",
-  "name" : "账号密码正确登录",
-  "time" : {
-    "start" : 1622794524125,
-    "stop" : 1622794524125,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "82e1d7bb5893b93c",
-  "name" : "账号密码错误登录",
-  "time" : {
-    "start" : 1622794501156,
-    "stop" : 1622794508607,
-    "duration" : 7451
+    "start" : 1622881512336,
+    "stop" : 1622881554045,
+    "duration" : 41709
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "742871f5972195db",
-  "name" : "验证错错误登录",
-  "time" : {
-    "start" : 1622794540473,
-    "stop" : 1622794540473,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "b65e4fd371d32c0a",
+  "uid" : "2de50ee670311a66",
   "name" : "书籍商城-商品列表",
   "time" : {
-    "start" : 1622794771212,
-    "stop" : 1622794804181,
-    "duration" : 32969
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "779979008c3d5a12",
-  "name" : "验证错错误登录",
-  "time" : {
-    "start" : 1622794565754,
-    "stop" : 1622794565754,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "5138fa54ba284e7",
-  "name" : "账号密码错误登录",
-  "time" : {
-    "start" : 1622794492440,
-    "stop" : 1622794499239,
-    "duration" : 6799
+    "start" : 1622881419458,
+    "stop" : 1622881457155,
+    "duration" : 37697
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "db6e69a882ef3aa2",
+  "uid" : "9e89888548623be8",
   "name" : "书籍商城-商品列表",
   "time" : {
-    "start" : 1622794746662,
-    "stop" : 1622794769639,
-    "duration" : 22977
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "52430f02087e782f",
-  "name" : "书籍商城-商品列表",
-  "time" : {
-    "start" : 1622794721118,
-    "stop" : 1622794744399,
-    "duration" : 23281
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "eb4b4ab2d58fabca",
-  "name" : "账号密码错误登录",
-  "time" : {
-    "start" : 1622794477177,
-    "stop" : 1622794490780,
-    "duration" : 13603
+    "start" : 1622881458483,
+    "stop" : 1622881484386,
+    "duration" : 25903
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "63c081dea23e6243",
-  "name" : "账号密码错误登录",
+  "uid" : "60162112dccf8d6",
+  "name" : "书籍商城-商品列表",
   "time" : {
-    "start" : 1622794510079,
-    "stop" : 1622794522638,
-    "duration" : 12559
+    "start" : 1622881485694,
+    "stop" : 1622881511024,
+    "duration" : 25330
   },
-  "status" : "broken",
+  "status" : "passed",
   "severity" : "normal"
 } ]

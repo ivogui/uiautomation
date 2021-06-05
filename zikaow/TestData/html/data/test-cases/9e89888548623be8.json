@@ -1,0 +1,120 @@
+{
+  "uid" : "9e89888548623be8",
+  "name" : "书籍商城-商品列表",
+  "fullName" : "TestCase.test_booksmall.TestMall#test_get_book_list",
+  "historyId" : "df17f564e2025155abf9980ade464032",
+  "time" : {
+    "start" : 1622881458483,
+    "stop" : 1622881484386,
+    "duration" : 25903
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestMall",
+    "time" : {
+      "start" : 1622881383405,
+      "stop" : 1622881389815,
+      "duration" : 6410
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1cdb04c52caccd8",
+      "name" : "书籍详情",
+      "source" : "1cdb04c52caccd8.png",
+      "type" : "image/png",
+      "size" : 742923
+    }, {
+      "uid" : "f275a8191f9dcc0c",
+      "name" : "付款页面",
+      "source" : "f275a8191f9dcc0c.png",
+      "type" : "image/png",
+      "size" : 214348
+    }, {
+      "uid" : "194177a666fd0fca",
+      "name" : "stdout",
+      "source" : "194177a666fd0fca.txt",
+      "type" : "text/plain",
+      "size" : 4418
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_class_fixture_TestMall::0",
+    "time" : {
+      "start" : 1622881555348,
+      "stop" : 1622881555762,
+      "duration" : 414
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "书城模块"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_booksmall"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestMall"
+  }, {
+    "name" : "host",
+    "value" : "MicroWin10-1243"
+  }, {
+    "name" : "thread",
+    "value" : "10992-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.test_booksmall"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "pos",
+    "value" : "2"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9e89888548623be8.json",
+  "parameterValues" : [ "2" ]
+}

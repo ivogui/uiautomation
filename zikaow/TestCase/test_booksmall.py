@@ -4,23 +4,30 @@ import pytest
 import allure
 import os
 import threading
-file_path1 = os.path.dirname(__file__)
-aa = "\\report\\images\\"
-fuck = f'{file_path1}{aa}'
+file_path2 = os.path.dirname(os.path.dirname(__file__))
+path_b = "\\TestData\\report\\images\\"
+path_image = f'{file_path2}{path_b}'
+path_aaa = r"\TestData\booksmall.yml"
 
 
 @allure.feature('书城模块')
 class TestMall:
     def setup_class(self):
         self.testDriver = App().restart().main()
-        # shutil.rmtree('../TestCase/report/images/')
-        # os.mkdir('../TestCase/report/images/')
 
     def setup(self):
         self.BooksMall = self.testDriver.go_homepage()
 
+    @allure.title('进入书城')
     def test_go_booksMall(self):
         self.BooksMall.Books_Mall()
+        if self.BooksMall.isElementPresent('xpath', "//*[@class='android.widget.FrameLayout' and @index='1']"
+                                                    "//*[@resource-id='com.zikao.eduol:id/centerPopupContainer']"
+                                           ) is True:
+            self.BooksMall.steps('\\TestData\\login.yml', 'login_quick')
+            self.BooksMall.Books_Mall()
+        allure.attach.file(self.BooksMall.get_screen(path_image),
+                           '进入书城', attachment_type=allure.attachment_type.PNG)
 
     # @allure.title('搜索')
     # def test_as(self):
@@ -71,17 +78,18 @@ class TestMall:
         print(ccc)
         ddd = self.BooksMall.get_element("id", "com.zikao.eduol:id/shop_detail_count", "text")
         print(ddd)
-        allure.attach.file(self.BooksMall.get_screen(fuck),
+        allure.attach.file(self.BooksMall.get_screen(path_image),
                            '书籍详情', attachment_type=allure.attachment_type.PNG)
         print("-------------v付款页面----------------")
-        self.BooksMall.steps('\\TestData\\booksmall.yml', 'buy')
+        print(path_aaa)
+        self.BooksMall.steps(path_aaa, 'buy')
         fa = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_title", "text")
         print(fa)
         fb = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_hint", "text")
         print(fb)
         fc = self.BooksMall.get_element("id", "com.zikao.eduol:id/pay_confirm_detail_price", "text")
         print(fc)
-        allure.attach.file(self.BooksMall.get_screen(fuck),
+        allure.attach.file(self.BooksMall.get_screen(path_image),
                            '付款页面', attachment_type=allure.attachment_type.PNG)
         self.BooksMall.books_back()
 

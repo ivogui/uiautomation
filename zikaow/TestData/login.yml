@@ -97,6 +97,39 @@ login_SMS:
   - by: id
     locator: com.zikao.eduol:id/tv_fg_login_by_sms_login
     action: click
+login_SMS1:
+  - by: id
+    locator: android:id/content
+    action: TouchAction
+    value:
+      - x_start: 539
+        y_start: 900
+      - x_end: 539
+        y_end: 1600
+  - by: id
+    locator: com.zikao.eduol:id/tv_personal_name
+    action: click
+  - by: xpath
+    locator: //*[@class='android.widget.ImageView' and @index='6']
+    action: click
+  - by: id
+    locator: com.zikao.eduol:id/et_fg_login_by_sms_phone
+    action: send
+    value: $var1
+  - by: id
+    locator: com.zikao.eduol:id/et_fg_login_by_sms_code
+    action: send
+    value: $var2
+login_quick:
+  - by: xpath
+    locator: //*[@class='android.widget.FrameLayout' and @index='1']//*[@resource-id='com.zikao.eduol:id/centerPopupContainer']//*[@resource-id='com.zikao.eduol:id/rtv_pop_alert_login']
+    action: click
+  - by: id
+    locator: com.zikao.eduol:id/shanyan_view_privacy_checkbox
+    action: click
+  - by: id
+    locator: com.zikao.eduol:id/shanyan_view_bt_one_key_login
+    action: click
 back:
   - by: id
     locator: android:id/content
